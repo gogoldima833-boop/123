@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная - Наша Компания</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+
+<body>
+    
+   <header class="main-header">
+    <div class="header-content">
+        <h1>NUKUSELECTROAPPARAT</h1>
+    </div>
+    <nav class="header-nav">
+        <a href="index.html">Главная</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="news.html">Новости</a>
+        <a href="portfolio.html">Наши проекты</a>
+    </nav>
+</header>
+<div class="hero-section">
+    <style>
+        .hero-section {
+
+            padding: 0;
+        }
+
+    </style>
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="carousel2.jpg" alt="Солнечные панели 1">
+        </div>
+    </div>
+    
+    <!-- Форма обратной связи -->
+    <div class="feedback-overlay">
+        <div class="feedback-form">
+            <h3>Запросить доступ к каталогу</h3>
+            <p>Рассчитаем стоимость солнечных панелей для вашего объекта</p>
+            
+            <!-- Сообщения формы -->
+            <div id="formMessage1" class="form-message"></div>
+            <div id="loading1" class="form-loading">
+                <div class="spinner"></div>
+                <p>Отправка...</p>
+            </div>
+            
+            <form id="feedbackForm1" onsubmit="submitForm(event, 'feedbackForm1', 'formMessage1', 'loading1')">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <button type="submit">Запросить каталог</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="content">  <!-- ← Добавил text-block -->
+        <h2>Необходимость использования солнечной энергии</h2>
+        <li>Использование солнечной энергии является важным направлением устойчивого развития. Она снижает зависимость от традиционных видов топлива, уменьшает выбросы углекислого газа и улучшает экологическую ситуацию. Развитие солнечных технологий повышает энергетическую безопасность, снижает затраты на электроэнергию и способствует экономическому росту.</li>
+        <li>В Узбекистане развитие возобновляемых источников энергии поддерживается на государственном уровне. В соответствии с постановлениями Президента № УП-220 (09.09.2022 г.) и № ПП-57 (16.02.2023 г.) создаются условия для внедрения солнечных установок и энергосберегающих технологий. Постановление № ПП-158 (30.04.2025 г.) предусматривает реализацию крупных проектов по строительству солнечных электростанций, что способствует укреплению энергетической независимости страны.</li>
+        </div>
+    </div>
+</div>
+    <!-- Основной контент -->
+    <div class="content">
+        <h2>Решения для энергоэффективности</h2>
+        <p>В последнее десятилетие во всем мире все более актуальными становятся вопросы ресурсосбережения, среди которых наиболее острые — в области энергосбережения и энергоэффективности и Узбекистан в этом не исключение. Это связано с тем, что потребление энергии растет гораздо быстрыми темпами, нежели ее воспроизводство, так как население республики растет, а экономика развивается. С этой точки зрения особую значимость приобретает вопрос внедрения возобновляемых источников энергии, как дополнительной генерации и дополнительных возможностей.</p>
+        <h2>Nukuselectroapparat – ведущий производитель решений в части:</h2>
+        <ul>
+            <li>Производства фотоэлектрических панелей и модулей.</li>
+            <li>Производства металлоконструкций.</li>
+            <li>Производства инверторов с    различными функционалом (автономные, сетевые, гибридные)</li>
+            <li>Решений для домашних фотоэлектростанций</li>
+            <li>Решения для орошения сельскохозяйственных угодий;</li>
+            <li>Решения для повышающих подстанций разного функционала для выдачи мощности с классом напряжения до 500kV.</li>
+            <li>Решения для управления и SCADA.</li>
+            <li>А также выполнение проектов «под ключ»</li>
+        </ul>
+    </div>
+
+    <div class="gallery-container">
+    <h2>Наша продукция</h2>
+    <div class="projects-grid">
+        <div class="project-item">
+            <a href="photomodules.html" target="_blank">
+                <img src="565236.002.png" alt="Фотомодули">
+                <div class="project-overlay">
+                    <h3>Фотомодули</h3>
+                    <p>от 550W, КПД от 22%, 30 лет гарантии на производительность</p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="power-stations.html" target="_blank">
+                <img src="project2.jpg" alt="Решения для строительства электрических станций">
+                <div class="project-overlay">
+                    <h3>Решения для строительства электрических станций</h3>
+                    <p>Строительство фотоэлектрических и ветростанций. Повышающих подстанций разного функционала для выдачи мощности с классом напряжения до 500kV.</p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="inverters.html" target="_blank">
+                <img src="project3.jpg" alt="Инверторы">
+                <div class="project-overlay">
+                    <h3>Инверторы</h3>
+                    <p>Установка и реализация подходящих вам по назначению инверторов</p>
+                </div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="metal-structures.html" target="_blank">
+                <img src="project4.jpg" alt="Металоконструкции">
+                <div class="project-overlay">
+                    <h3>Металоконструкции</h3>
+                    <p>Металлоконструкции а также полный перечень продукции необходимый для установки и функционирования солнечных панелей</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="content">  <!-- ← Добавил text-block -->
+        <h2>Почему выбирают нас?</h2>
+        <li>Группа компаний АО «O'zelektroapparat-Electroshield» — крупнейший отечественный производитель электротехнической продукции, включая решения для солнечной энергетики.</li>
+        <li>На базе ООО «NUKUSELECTROAPPARAT» действует автоматическая линия по выпуску фотоэлектрических модулей мощностью до 200 МВт в год и автоматизированная линия по выпуску монтажных систем для быстрой и надёжной установки модулей..</li>
+        <div class="feature-item">
+            <h3>Широкий ассортимент</h3>
+            <li>Полный спектр электротехнической продукции - от компонентов до готовых решений под ключ</li>
+        </div>
+        <div class="feature-item">
+            <h3>Солнечная энергетика</h3>
+            <li>Проектирование и монтаж современных солнечных электростанций для бизнеса и дома</li>
+        </div>
+        <div class="feature-item">
+            <h3>Промышленное оборудование</h3>
+            <li>Поставка и обслуживание электрооборудования для промышленных предприятий</li>
+        </div>
+        <div class="feature-item">
+            <h3>Техническая поддержка</h3>
+            <li>Квалифицированные инженеры и сервисные специалисты 24/7</li>
+        </div>
+        <div class="feature-item">
+            <h3>Индивидуальные решения</h3>
+            <p>Разработка customized решений под конкретные задачи каждого клиента</p>
+        </div>
+        <div class="feature-item">
+            <h3>Инновации</h3>
+            <p>Внедрение передовых технологий в области возобновляемой энергетики</p>
+        </div>
+    </div>
+</div>
+<div class="horizontal-feedback">
+    <div class="feedback-content">
+        <div class="feedback-text">
+            <h3>Готовы к сотрудничеству?</h3>
+            <p>Запросить доступ к каталогу</p>
+        </div>
+        <div class="feedback-form-horizontal">
+            
+            <!-- Сообщения для второй формы -->
+            <div id="formMessage2" class="form-message"></div>
+            <div id="loading2" class="form-loading">
+            </div>
+            
+            <form id="feedbackForm2" onsubmit="submitForm(event, 'feedbackForm2', 'formMessage2', 'loading2')">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Запросить каталог</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+    <!-- Футер -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html"> Политика конфиденциальности</a>
+            <a href="terms-of-use.html"> Пользовательское соглашение</a>
+            <a href="legal.html"> Юридическая информация</a>
+        </div>
+        
+        <div class="copyright">
+            © 2025 Nukuselectroapparat. Все права защищены.<br>
+            Телефон: +998(61) 225-8070 | Email: cc@nkea.uz
+        </div>
+    </footer>
+
+    <script>
+        // Функция для отправки формы
+        function submitForm(event, formId, messageId, loadingId) {
+            event.preventDefault();
+            
+            const form = document.getElementById(formId);
+            const messageDiv = document.getElementById(messageId);
+            const loadingDiv = document.getElementById(loadingId);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Показываем загрузку
+            loadingDiv.style.display = 'block';
+            messageDiv.style.display = 'none';
+            submitBtn.disabled = true;
+            
+            // Собираем данные формы
+            const formData = new FormData(form);
+            
+            // Отправляем запрос
+            fetch('send_email_real.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Ошибка сети');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    messageDiv.textContent = '' + data.message;
+                    messageDiv.className = 'form-message form-success';
+                    form.reset(); // Очищаем форму после успешной отправки
+                } else {
+                    messageDiv.textContent = '❌ ' + data.message;
+                    messageDiv.className = 'form-message form-error';
+                }
+                messageDiv.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                messageDiv.textContent = '❌ Ошибка отправки формы. Пожалуйста, попробуйте еще раз.';
+                messageDiv.className = 'form-message form-error';
+                messageDiv.style.display = 'block';
+            })
+            .finally(() => {
+                loadingDiv.style.display = 'none';
+                submitBtn.disabled = false;
+            });
+        }
+
+        // Анимация появления при скролле
+        function checkVisibility() {
+            const items = document.querySelectorAll('.project-item');
+            
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                const isVisible = (rect.top <= window.innerHeight - 100);
+                
+                if (isVisible) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        // Запускаем при загрузке и при скролле
+        window.addEventListener('load', checkVisibility);
+        window.addEventListener('scroll', checkVisibility);
+
+        // Также запускаем проверку сразу
+        checkVisibility();
+    </script>
+
+</body>
+</html>

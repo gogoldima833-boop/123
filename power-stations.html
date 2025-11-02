@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотомодули - NUKUSELECTROAPPARAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>NUKUSELECTROAPPARAT</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="index.html">Главная</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="news.html">Новости</a>
+            <a href="portfolio.html">Наши проекты</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Фотомодули</h1>
+        <img src="565236.002.png" alt="Фотомодули" style="max-width: 100%; height: auto; margin: 20px 0;">
+        
+        <h2>Технические характеристики</h2>
+        <ul>
+            <li><strong>Мощность:</strong> от 550W</li>
+            <li><strong>КПД:</strong> от 22%</li>
+            <li><strong>Гарантия на производительность:</strong> 30 лет</li>
+            <li><strong>Тип:</strong> Моно-кристаллические</li>
+            <li><strong>Размеры:</strong> Стандартные и кастомные</li>
+            <li><strong>Применение:</strong> Жилые, коммерческие, промышленные объекты</li>
+        </ul>
+
+        <h2>Преимущества наших фотомодулей</h2>
+        <div class="feature-item">
+            <h3>✅ Высокая эффективность</h3>
+            <p>КПД более 22% обеспечивает максимальную выработку энергии даже при ограниченной площади</p>
+        </div>
+        <div class="feature-item">
+            <h3>✅ Долговечность</h3>
+            <p>30-летняя гарантия на производительность подтверждает надежность нашей продукции</p>
+        </div>
+        <div class="feature-item">
+            <h3>✅ Устойчивость к погодным условиям</h3>
+            <p>Специальное покрытие защищает от УФ-излучения, влаги и перепадов температур</p>
+        </div>
+
+        <div class="horizontal-feedback">
+            <div class="feedback-content">
+                <div class="feedback-text">
+                    <h3>Заинтересовали наши фотомодули?</h3>
+                    <p>Получите подробный каталог и коммерческое предложение</p>
+                </div>
+                <div class="feedback-form-horizontal">
+                    <form id="photmodulesForm" onsubmit="submitForm(event, 'photmodulesForm', 'formMessagePhoto', 'loadingPhoto')">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" placeholder="Телефон" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="hidden" name="product" value="Фотомодули">
+                            <button type="submit">Получить каталог</button>
+                        </div>
+                    </form>
+                    <div id="formMessagePhoto" class="form-message"></div>
+                    <div id="loadingPhoto" class="form-loading" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Отправка...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Политика конфиденциальности</a>
+            <a href="terms-of-use.html">Пользовательское соглашение</a>
+            <a href="legal.html">Юридическая информация</a>
+        </div>
+        <div class="copyright">
+            © 2025 Nukuselectroapparat. Все права защищены.<br>
+            Телефон: +998(61) 225-8070 | Email: cc@nkea.uz
+        </div>
+    </footer>
+
+    <script>
+        // Функция для отправки формы (такая же как в index.html)
+        function submitForm(event, formId, messageId, loadingId) {
+            event.preventDefault();
+            
+            const form = document.getElementById(formId);
+            const messageDiv = document.getElementById(messageId);
+            const loadingDiv = document.getElementById(loadingId);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            loadingDiv.style.display = 'block';
+            messageDiv.style.display = 'none';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            fetch('send_email_real.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    messageDiv.textContent = '✅ ' + data.message;
+                    messageDiv.className = 'form-message form-success';
+                    form.reset();
+                } else {
+                    messageDiv.textContent = '❌ ' + data.message;
+                    messageDiv.className = 'form-message form-error';
+                }
+                messageDiv.style.display = 'block';
+            })
+            .catch(error => {
+                messageDiv.textContent = '❌ Ошибка отправки формы. Пожалуйста, попробуйте еще раз.';
+                messageDiv.className = 'form-message form-error';
+                messageDiv.style.display = 'block';
+            })
+            .finally(() => {
+                loadingDiv.style.display = 'none';
+                submitBtn.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>

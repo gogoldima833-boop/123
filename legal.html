@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Наша Компания</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+   <header class="main-header">
+    <div class="header-content">
+        <h1>NUKUSELECTROAPPARAT</h1>
+    </div>
+    <nav class="header-nav">
+        <a href="index.html">Главная</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="news.html">Новости</a>
+        <a href="portfolio.html">Наши проекты</a>
+    </nav>
+</header>
+
+    <!-- Основной контент -->
+    <main class="certificates-container">
+        <div class="certificates-header">
+            <h2>Наши сертификаты</h2>
+            <p>Официальные документы, подтверждающие качество нашей продукции</p>
+        </div>
+
+        <div class="certificates-grid">
+            <!-- Сертификат 1 -->
+            <div class="certificate-card">
+                <div class="certificate-icon"></div>
+                <h3>Серт соот Фотоэлект модули НукусЭА до июля 2027</h3>
+                <div class="pdf-preview-container">
+                    <iframe 
+                        src="certificate1.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                        class="pdf-preview"
+                        title="Сертификат качества ISO 9001">
+                    </iframe>
+                    <div class="pdf-overlay">
+                        <div class="zoom-indicator">
+                            🔍 Наведите для увеличения
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сертификат 2 -->
+            <div class="certificate-card">
+                <div class="certificate-icon"></div>
+                <h3>Сертификат местноого производства</h3>
+                
+                <div class="pdf-preview-container">
+                    <iframe 
+                        src="certificate2.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                        class="pdf-preview"
+                        title="Сертификат соответствия ГОСТ">
+                    </iframe>
+                    <div class="pdf-overlay">
+                        <div class="zoom-indicator">
+                            🔍 Наведите для увеличения
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+ <!-- Футер -->
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html"> Политика конфиденциальности</a>
+            <a href="terms-of-use.html"> Пользовательское соглашение</a>
+            <a href="legal.html"> Юридическая информация</a>
+        </div>
+        
+
+        
+        <div class="copyright">
+            © 2024 Наша Компания. Все права защищены.<br>
+            Телефон: +7 (999) 123-45-67 | Email: info@company.ru
+        </div>
+    </footer>
+    <script>
+        // Дополнительные улучшения для PDF просмотра
+        document.addEventListener('DOMContentLoaded', function() {
+            const certificateCards = document.querySelectorAll('.certificate-card');
+            
+            certificateCards.forEach(card => {
+                // Добавляем обработчик клика для карточки
+                card.addEventListener('click', function(e) {
+                    // Предотвращаем срабатывание при клике на кнопки
+                    if (!e.target.closest('.certificate-actions')) {
+                        const pdfLink = this.querySelector('.btn-view').href;
+                        window.open(pdfLink, '_blank');
+                    }
+                });
+                
+                // Улучшаем плавность анимации
+                const pdfContainer = card.querySelector('.pdf-preview-container');
+                card.addEventListener('mouseenter', function() {
+                    pdfContainer.style.transform = 'scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    pdfContainer.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Добавляем индикатор загрузки для PDF
+            const pdfFrames = document.querySelectorAll('.pdf-preview');
+            pdfFrames.forEach(frame => {
+                frame.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                
+                frame.style.opacity = '0';
+                frame.style.transition = 'opacity 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>
