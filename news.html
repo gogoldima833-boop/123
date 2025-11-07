@@ -118,16 +118,38 @@
 
 
     </main>
-
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Главная</a>
-            <a href="news.html">Новости</a>
-            <a href="certificates.html">Сертификаты</a>
-            <a href="privacy.html">Контакты</a>
-            <a href="privacy.html">Политика конфиденциальности</a>
+<div class="horizontal-feedback">
+    <div class="feedback-content">
+        <div class="feedback-text">
+            <h3>Готовы к сотрудничеству?</h3>
         </div>
-        <p>© 2024 ООО «Nukuselectroapparat». Все права защищены.</p>
+        <div class="feedback-form-horizontal">
+            
+            <!-- Сообщения для второй формы -->
+            <div id="formMessage2" class="form-message"></div>
+            <div id="loading2" class="form-loading">
+            </div>
+            
+            <form id="feedbackForm2" onsubmit="submitForm(event, 'feedbackForm2', 'formMessage2', 'loading2')">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Запросить каталог</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+   <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Политика конфиденциальности</a>
+            <a href="legal.html">Юридическая информация</a>
+        </div>
+        <div class="copyright">
+            © 2025 Nukuselectroapparat. Все права защищены.<br>
+            Телефон: +998(61) 225-8070 | Email: cc@nkea.uz
+        </div>
     </footer>
 
     <script>

@@ -254,7 +254,29 @@
             </section>
         </div>
     </main>
-
+<div class="horizontal-feedback">
+    <div class="feedback-content">
+        <div class="feedback-text">
+            <h3>Готовы к сотрудничеству?</h3>
+        </div>
+        <div class="feedback-form-horizontal">
+            
+            <!-- Сообщения для второй формы -->
+            <div id="formMessage2" class="form-message"></div>
+            <div id="loading2" class="form-loading">
+            </div>
+            
+            <form id="feedbackForm2" onsubmit="submitForm(event, 'feedbackForm2', 'formMessage2', 'loading2')">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Запросить каталог</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
     <footer>

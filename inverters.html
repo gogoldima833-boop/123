@@ -160,7 +160,9 @@
                     <h3>Универсальность</h3>
                     <p>Широкий диапазон входных напряжений аккумуляторных батарей от 12В до 400В. Поддержка однофазных и трехфазных систем.</p>
                 </div>
-                
+        </div>     
+        <div class="features-section"></div> 
+            <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon"></div>
                     <h3>Мониторинг и управление</h3>
@@ -202,7 +204,10 @@
                     <h4>Промышленность</h4>
                     <p>Заводы, фабрики, производственные цеха</p>
                 </div>
+        </div>      
                 
+        <div class="application-areas">     
+            <div class="application-grid">
                 <div class="application-item">
                     <div class="application-icon"></div>
                     <h4>Сельское хозяйство</h4>
@@ -223,31 +228,30 @@
             </div>
         </div>
 
-        <div class="horizontal-feedback">
-            <div class="feedback-content">
-                <div class="feedback-text">
-                    <h3>Нужна консультация по инверторам?</h3>
-                    <p>Получите подробные технические характеристики и коммерческое предложение</p>
-                </div>
-                <div class="feedback-form-horizontal">
-                    <form id="invertersForm" onsubmit="submitForm(event, 'invertersForm', 'formMessageInverters', 'loadingInverters')">
-                        <div class="form-row">
-                            <input type="text" name="name" placeholder="Ваше имя" required>
-                            <input type="tel" name="phone" placeholder="Телефон" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <input type="hidden" name="product" value="Инверторы">
-                            <button type="submit">Получить консультацию</button>
-                        </div>
-                    </form>
-                    <div id="formMessageInverters" class="form-message"></div>
-                    <div id="loadingInverters" class="form-loading" style="display: none;">
-                        <div class="spinner"></div>
-                        <p>Отправка...</p>
-                    </div>
-                </div>
+       <div class="horizontal-feedback">
+    <div class="feedback-content">
+        <div class="feedback-text">
+            <h3>Запросить доступ к каталогу</h3>
+
+        </div>
+        <div class="feedback-form-horizontal">
+            
+            <!-- Сообщения для второй формы -->
+            <div id="formMessage2" class="form-message"></div>
+            <div id="loading2" class="form-loading">
             </div>
+            
+            <form id="feedbackForm2" onsubmit="submitForm(event, 'feedbackForm2', 'formMessage2', 'loading2')">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Запросить каталог</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
     <footer>
         <div class="footer-links">

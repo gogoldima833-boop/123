@@ -64,15 +64,20 @@
     <div class="feedback-content">
         <div class="feedback-text">
             <h3>Готовы к сотрудничеству?</h3>
-            <p>Получите бесплатную консультацию наших специалистов</p>
         </div>
         <div class="feedback-form-horizontal">
-            <form action="https://formspree.io/f/ТВОЙ_FORM_ID" method="POST">
+            
+            <!-- Сообщения для второй формы -->
+            <div id="formMessage2" class="form-message"></div>
+            <div id="loading2" class="form-loading">
+            </div>
+            
+            <form id="feedbackForm2" onsubmit="submitForm(event, 'feedbackForm2', 'formMessage2', 'loading2')">
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Ваше имя" required>
                     <input type="tel" name="phone" placeholder="Телефон" required>
-                    <input type="email" name="email" placeholder="Email">
-                    <button type="submit">Отправить заявку</button>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Запросить каталог</button>
                 </div>
             </form>
         </div>
@@ -82,7 +87,6 @@
 <footer>
     <div class="footer-links">
         <a href="privacy-policy.html">Политика конфиденциальности</a>
-        <a href="terms-of-use.html">Пользовательское соглашение</a>
         <a href="legal.html">Юридическая информация</a>
     </div>
 </footer>
